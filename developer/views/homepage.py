@@ -1,5 +1,7 @@
+from flask import render_template
 from flask.views import MethodView
+
 
 class DeveloperHome(MethodView):
     def get(self):
-        return "Welcome to developer Homepage"
+        return render_template('developer/homepage.html')

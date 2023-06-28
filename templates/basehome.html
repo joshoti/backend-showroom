@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Home{% endblock %}</title>
+    {# <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> #}
+    {# <ul class="nav-list">
+        {{ nav_link('home', 'Home') }}
+        {{ nav_link('about', 'About') }}
+        {{ nav_link('contact', 'Get in touch') }}
+    </ul> #}
+</head>
+<body>
+    <ul class="nav-list">
+        <li><a href="{{ url_for('web homepage') }}">Home</a></li>
+        <li><a href="{{ url_for('accounts subdomain homepage') }}">Accounts</a></li>
+        <li><a href="{{ url_for('blog subdomain homepage') }}">Blog</a></li>
+        <li><a href="{{ url_for('developer subdomain homepage') }}">Developers</a></li>
+    </ul>
+    {% block body %}<h2>Hello</h2>{% endblock %}
+</body>
+</html>

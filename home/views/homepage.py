@@ -1,5 +1,7 @@
+from flask import render_template
 from flask.views import MethodView
+
 
 class HomePage(MethodView):
     def get(self):
-        return "Welcome to backend-showroom Homepage"
+        return render_template('home/homepage.html')

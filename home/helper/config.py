@@ -3,21 +3,24 @@ import os
 from dotenv import load_dotenv
 from flask import Flask
 
-from accounts.views import *
-from blog.views import *
-from developer.views import *
-from home.views import *
+from accounts.views import AccountsHome
+from api.views import ApiHealthCheck
+from blog.views import BlogHome
+from developer.views import DeveloperHome
+from home.views import HomePage
 
 load_dotenv()
 
-def create_flask_app(app):
-    app = Flask(__name__)
+
+def create_flask_app(name):
+    app = Flask(name)
 
     configuration = get_config_object()
     app.config.from_object(configuration)
 
-    add_url_rules(app)
+    register_endpoints(app)
     return app
+
 
 def get_config_object() -> object:
     """ Accepted configuration names are: production, testing, development """
@@ -30,8 +33,10 @@ def get_config_object() -> object:
     }
     return config_mapping.get(config_name.lower(), ProductionConfig)
 
-def add_url_rules(app: Flask):
-    app.add_url_rule('/', view_func=HomePage.as_view('default homepage'))
+
+def register_endpoints(app: Flask):
+    app.add_url_rule('/', view_func=HomePage.as_view('web homepage'))
+    app.add_url_rule('/', view_func=ApiHealthCheck.as_view('api subdomain health check'), subdomain='api')
     app.add_url_rule('/', view_func=AccountsHome.as_view('accounts subdomain homepage'), subdomain='accounts')
     app.add_url_rule('/', view_func=DeveloperHome.as_view('developer subdomain homepage'), subdomain='developer')
     app.add_url_rule('/', view_func=BlogHome.as_view('blog subdomain homepage'), subdomain='blog')
@@ -42,6 +47,7 @@ class Config:
     TESTING = False
     PROPAGATE_EXCEPTIONS = True
     SERVER_NAME = 'localhost:5000'
+    API_NAME = f'api.{SERVER_NAME}'
 
 
 class ProductionConfig(Config):
