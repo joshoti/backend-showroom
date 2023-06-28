@@ -47,7 +47,6 @@ class Config:
     TESTING = False
     PROPAGATE_EXCEPTIONS = True
     SERVER_NAME = 'localhost:5000'
-    API_NAME = f'api.{SERVER_NAME}'
 
 
 class ProductionConfig(Config):
