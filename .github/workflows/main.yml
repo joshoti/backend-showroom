@@ -40,4 +40,4 @@ jobs:
       run: echo $DOTENV > .env
       
     - name: Test with pytest
-      run: pytest
+      run: pytest --verbose
