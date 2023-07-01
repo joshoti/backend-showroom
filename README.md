@@ -40,3 +40,6 @@ python3 -m pip install -r requirements.txt
 
 ## Usage
 * See [Documentation](docs/README.md) to get started
+
+## Acknowledgements
+* HTML templates were gotten from [Mobirise](https://mobirise.com/html-templates/)
