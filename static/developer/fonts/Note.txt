@@ -1,0 +1,4 @@
+The location of the fonts would need special attention
+
+socicon.woff2 is called from ".\css\socicon\styles.css" in Ln 7
+mobirise2.ttf is called from ".\css\mobirise-icons2\mobirise2.css" in Ln 6
