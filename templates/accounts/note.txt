@@ -1,0 +1,3 @@
+Use Blog homepage for "select your path" type of flow
+Account for (personal, work, school)
+Crypto page for when a user is managing their account. See Google profile page for more
