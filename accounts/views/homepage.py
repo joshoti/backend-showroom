@@ -4,4 +4,5 @@ from flask.views import MethodView
 
 class AccountsHome(MethodView):
     def get(self):
+        return render_template('accounts/crypto (accounts).html')
         return render_template('accounts/homepage.html')

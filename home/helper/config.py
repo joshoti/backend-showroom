@@ -7,7 +7,7 @@ from accounts.views import AccountsHome
 from api.views import ApiHealthCheck
 from blog.views import BlogHome
 from developer.views import DeveloperHome
-from home.views import HomePage
+from home.views import HomeIcon, HomePage
 
 load_dotenv()
 
@@ -36,6 +36,7 @@ def get_config_object() -> object:
 
 def register_endpoints(app: Flask):
     app.add_url_rule('/', view_func=HomePage.as_view('web homepage'))
+    app.add_url_rule('/favicon.ico', view_func=HomeIcon.as_view('web icon'))
     app.add_url_rule('/', view_func=ApiHealthCheck.as_view('api subdomain health check'), subdomain='api')
     app.add_url_rule('/', view_func=AccountsHome.as_view('accounts subdomain homepage'), subdomain='accounts')
     app.add_url_rule('/', view_func=DeveloperHome.as_view('developer subdomain homepage'), subdomain='developer')

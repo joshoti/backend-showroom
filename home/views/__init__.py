@@ -1,1 +1,1 @@
-from .homepage import HomePage
+from .homepage import HomePage, HomeIcon
