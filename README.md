@@ -38,6 +38,15 @@ pip install -r requirements.txt
 python3 -m pip install -r requirements.txt
 ```
 
+4. Run Flask app (using terminal)
+```py
+(Windows)
+python app.py
+
+(Unix)
+python3 app.py
+```
+
 ## Usage
 * See [Documentation](docs/README.md) to get started
 
