@@ -36,6 +36,7 @@ def get_config_object() -> object:
 
 def register_endpoints(app: Flask):
     app.add_url_rule('/', view_func=HomePage.as_view('web homepage'))
+    app.add_url_rule('/health', view_func=ApiHealthCheck.as_view('app health check'))
     app.add_url_rule('/favicon.ico', view_func=HomeIcon.as_view('web icon'))
     app.add_url_rule('/', view_func=ApiHealthCheck.as_view('api subdomain health check'), subdomain='api')
     app.add_url_rule('/', view_func=AccountsHome.as_view('accounts subdomain homepage'), subdomain='accounts')
