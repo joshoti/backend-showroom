@@ -48,7 +48,7 @@ class Config:
     DEBUG = False
     TESTING = False
     PROPAGATE_EXCEPTIONS = True
-    SERVER_NAME = 'localhost:5000'
+    # SERVER_NAME = 'localhost:5000'
 
 
 class ProductionConfig(Config):
