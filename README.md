@@ -1,15 +1,33 @@
 # backend-showroom
 This repository displays concepts commonly used in backend development
 
-# Getting Started
-## Dependencies
-* Python version 3.8+
+# Roadmap
+- [x] API creation
+- [ ] Advanced API configuration
+- [ ] Set up database
+- [ ] Request routing
+- [ ] Write unit tests
+- [ ] Create API Documentation
+- [ ] Home subdomain
+- [ ] Accounts subdomain
+- [ ] Write integration test
+- [ ] Developer subdomain
+- [ ] Blog subdomain
+- [ ] Converting templates to React single page app
 
+# Getting Started
 ## Installation
 * Python can be downloaded on Python's [official page](https://www.python.org/downloads/)
+* Python 3.10 or above is required
 
-## How to run programme
-1. Create virtual environment (using terminal)
+## Usage
+1. Download Flask app (using terminal)
+```bash
+git clone https://github.com/joshoti/backend-showroom.git
+cd backend-showroom
+```
+
+2. Create virtual environment (using terminal)
 ```py
 python -m venv "name of virtual environment"
 
@@ -20,7 +38,7 @@ python -m venv venv
 python3 -m venv venv
 ```
 
-2. Activate virtual environment (using terminal)
+3. Activate virtual environment (using terminal)
 ```py
 (Windows)
 venv\Scripts\activate
@@ -29,7 +47,7 @@ venv\Scripts\activate
 source venv\Scripts\activate
 ```
 
-3. Download dependencies (using terminal)
+4. Download dependencies (using terminal)
 ```py
 (Windows)
 pip install -r requirements.txt
@@ -38,7 +56,7 @@ pip install -r requirements.txt
 python3 -m pip install -r requirements.txt
 ```
 
-4. Run Flask app (using terminal)
+5. Run Flask app (using terminal)
 ```py
 (Windows)
 python app.py
@@ -46,9 +64,6 @@ python app.py
 (Unix)
 python3 app.py
 ```
-
-## Usage
-* See [Documentation](docs/README.md) to get started
 
 ## Acknowledgements
 * HTML templates were gotten from [Mobirise](https://mobirise.com/html-templates/)
