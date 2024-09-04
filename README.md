@@ -44,7 +44,7 @@ python3 -m venv venv
 venv\Scripts\activate
 
 (Unix)
-source venv\Scripts\activate
+source venv/bin/activate
 ```
 
 4. Download dependencies (using terminal)
